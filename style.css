@@ -1,0 +1,237 @@
+:root {
+  --paper: #F5F6F1;
+  --card: #FFFFFF;
+  --line: #DCD9CC;
+  --ink: #202A25;
+  --ink-soft: #5C6259;
+  --moss: #355E4B;
+  --moss-dark: #26463A;
+  --correct: #3C7A4E;
+  --correct-bg: #E7F1E9;
+  --wrong: #A23E3E;
+  --wrong-bg: #F5E7E5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Noto Sans JP", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+}
+
+.screen.hidden { display: none; }
+
+.app-title {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 4px;
+  letter-spacing: 0.02em;
+}
+
+.app-sub {
+  color: var(--ink-soft);
+  font-size: 14px;
+  margin: 0 0 28px;
+}
+
+.field { margin-bottom: 22px; }
+
+.field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--ink-soft);
+}
+
+#num-questions {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--ink);
+}
+#num-questions:focus { outline: 2px solid var(--moss); outline-offset: 1px; }
+
+.radio-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.radio-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  cursor: pointer;
+  font-size: 15px;
+}
+.radio-pill input { accent-color: var(--moss); width: 16px; height: 16px; }
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.checkbox-row input { accent-color: var(--moss); width: 16px; height: 16px; }
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  border: none;
+  border-radius: 6px;
+  background: var(--moss);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.btn-primary:hover { background: var(--moss-dark); }
+.btn-primary:focus-visible { outline: 2px solid var(--moss-dark); outline-offset: 2px; }
+
+.error-text {
+  color: var(--wrong);
+  font-size: 13px;
+  margin-top: 10px;
+  min-height: 16px;
+}
+
+/* --- quiz screen --- */
+.quiz-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+}
+
+.progress-track {
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+.progress-bar {
+  height: 100%;
+  background: var(--moss);
+  width: 0%;
+  transition: width 0.25s ease;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 32px 24px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.pattern-no {
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin: 0 0 12px;
+}
+
+.question-text {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 21px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.answer-text {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 18px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  color: var(--moss-dark);
+}
+.answer-text.hidden { display: none; }
+
+.judge-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+.judge-row.hidden { display: none; }
+
+.btn-judge {
+  flex: 1;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-wrong { background: var(--wrong-bg); color: var(--wrong); border-color: #e4c9c7; }
+.btn-correct { background: var(--correct-bg); color: var(--correct); border-color: #c7ddca; }
+
+/* --- result screen --- */
+.result-score {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 26px;
+  margin: 12px 0 4px;
+}
+.result-percent {
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+}
+
+.review-wrap { margin-bottom: 24px; }
+.review-wrap.hidden { display: none; }
+
+.review-title {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin-bottom: 10px;
+}
+
+.review-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-list li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--wrong);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.5;
+}

@@ -1,0 +1,154 @@
+// ============================================================
+// 構文150 クイズ - アプリ本体
+// ============================================================
+
+const screenSettings = document.getElementById('screen-settings');
+const screenQuiz = document.getElementById('screen-quiz');
+const screenResult = document.getElementById('screen-result');
+
+const numQuestionsInput = document.getElementById('num-questions');
+const totalCountEl = document.getElementById('total-count');
+const settingsError = document.getElementById('settings-error');
+const btnStart = document.getElementById('btn-start');
+
+const progressText = document.getElementById('progress-text');
+const scoreText = document.getElementById('score-text');
+const progressBar = document.getElementById('progress-bar');
+const patternNoEl = document.getElementById('pattern-no');
+const questionTextEl = document.getElementById('question-text');
+const answerTextEl = document.getElementById('answer-text');
+const btnReveal = document.getElementById('btn-reveal');
+const judgeRow = document.getElementById('judge-row');
+const btnCorrect = document.getElementById('btn-correct');
+const btnWrong = document.getElementById('btn-wrong');
+
+const resultCorrectEl = document.getElementById('result-correct');
+const resultTotalEl = document.getElementById('result-total');
+const resultPercentEl = document.getElementById('result-percent');
+const reviewWrap = document.getElementById('review-wrap');
+const reviewList = document.getElementById('review-list');
+const btnRestart = document.getElementById('btn-restart');
+
+let quizItems = [];   // 出題される構文の配列（{no, ja, en, dir}）
+let currentIndex = 0;
+let correctCount = 0;
+let wrongItems = [];
+
+totalCountEl.textContent = QUIZ_DATA.length;
+numQuestionsInput.max = QUIZ_DATA.length;
+
+function showScreen(el) {
+  [screenSettings, screenQuiz, screenResult].forEach(s => s.classList.add('hidden'));
+  el.classList.remove('hidden');
+}
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+btnStart.addEventListener('click', () => {
+  const n = parseInt(numQuestionsInput.value, 10);
+  const total = QUIZ_DATA.length;
+
+  if (!n || n < 1 || n > total) {
+    settingsError.textContent = `出題数は 1〜${total} の範囲で入力してください。`;
+    return;
+  }
+  settingsError.textContent = '';
+
+  const direction = document.querySelector('input[name="direction"]:checked').value;
+  const shuffleOn = document.getElementById('shuffle-order').checked;
+
+  let pool = shuffleOn ? shuffle(QUIZ_DATA) : QUIZ_DATA.slice();
+  pool = pool.slice(0, n);
+
+  quizItems = pool.map(item => {
+    let dir = direction;
+    if (direction === 'mix') dir = Math.random() < 0.5 ? 'ja2en' : 'en2ja';
+    return { ...item, dir };
+  });
+
+  currentIndex = 0;
+  correctCount = 0;
+  wrongItems = [];
+  showScreen(screenQuiz);
+  renderQuestion();
+});
+
+function renderQuestion() {
+  const item = quizItems[currentIndex];
+  patternNoEl.textContent = item.no;
+  progressText.textContent = `${currentIndex + 1} / ${quizItems.length}`;
+  scoreText.textContent = `正解 ${correctCount}`;
+  progressBar.style.width = `${(currentIndex / quizItems.length) * 100}%`;
+
+  if (item.dir === 'ja2en') {
+    questionTextEl.textContent = item.ja;
+    answerTextEl.textContent = item.en;
+  } else {
+    questionTextEl.textContent = item.en;
+    answerTextEl.textContent = item.ja;
+  }
+
+  answerTextEl.classList.add('hidden');
+  judgeRow.classList.add('hidden');
+  btnReveal.classList.remove('hidden');
+}
+
+btnReveal.addEventListener('click', () => {
+  answerTextEl.classList.remove('hidden');
+  judgeRow.classList.remove('hidden');
+  btnReveal.classList.add('hidden');
+});
+
+function goNext(wasCorrect) {
+  const item = quizItems[currentIndex];
+  if (wasCorrect) {
+    correctCount++;
+  } else {
+    wrongItems.push(item);
+  }
+
+  currentIndex++;
+  if (currentIndex < quizItems.length) {
+    renderQuestion();
+  } else {
+    finishQuiz();
+  }
+}
+
+btnCorrect.addEventListener('click', () => goNext(true));
+btnWrong.addEventListener('click', () => goNext(false));
+
+function finishQuiz() {
+  progressBar.style.width = '100%';
+  const total = quizItems.length;
+  const percent = Math.round((correctCount / total) * 100);
+
+  resultCorrectEl.textContent = correctCount;
+  resultTotalEl.textContent = total;
+  resultPercentEl.textContent = `正答率 ${percent}%`;
+
+  if (wrongItems.length > 0) {
+    reviewWrap.classList.remove('hidden');
+    reviewList.innerHTML = '';
+    wrongItems.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = `No.${item.no}　${item.ja}　／　${item.en}`;
+      reviewList.appendChild(li);
+    });
+  } else {
+    reviewWrap.classList.add('hidden');
+  }
+
+  showScreen(screenResult);
+}
+
+btnRestart.addEventListener('click', () => {
+  showScreen(screenSettings);
+});
