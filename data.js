@@ -149,7 +149,6 @@ const QUIZ_DATA = [
 { no: 148,  ja: "私はこれに似た帽子を持っている。",    en: "I have a hat similar to this." },
 { no: 149,  ja: "私は，ただ安かったという理由だけでこのコンピューターを買いました。",    en: "I bought this computer only because it was cheap." },
 { no: 150,  ja: "ロボットが芸術作品を生み出すときが来るかもしれない。",    en: "The time may come when robots create works of art." },
-
 ];
 
 if (typeof module !== "undefined" && module.exports) {
