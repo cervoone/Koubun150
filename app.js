@@ -38,6 +38,15 @@ let wrongItems = [];
 totalCountEl.textContent = QUIZ_DATA.length;
 numQuestionsInput.max = QUIZ_DATA.length;
 
+// ★ここから追加：前回使用時の設定を読み込む
+const SETTINGS_KEY = 'koubun150-settings';
+const savedSettings = JSON.parse(localStorage.getItem(SETTINGS_KEY) || 'null');
+if (savedSettings) {
+  if (savedSettings.startNumber) startNumberInput.value = savedSettings.startNumber;
+  if (savedSettings.numQuestions) numQuestionsInput.value = savedSettings.numQuestions;
+}
+// ★ここまで追加
+
 function showScreen(el) {
   [screenSettings, screenQuiz, screenResult].forEach(s => s.classList.add('hidden'));
   el.classList.remove('hidden');
@@ -80,6 +89,13 @@ btnStart.addEventListener('click', () => {
   }
 
   settingsError.textContent = '';
+
+  // ★ここから追加：今回の設定を保存する
+localStorage.setItem(SETTINGS_KEY, JSON.stringify({
+  startNumber: startNumber,
+  numQuestions: n
+}));
+// ★ここまで追加
 
   const direction =
     document.querySelector('input[name="direction"]:checked').value;
