@@ -122,13 +122,13 @@
   }
 
   // 過去にパスワード認証済みなら（localStorageに記録があれば）自動で表示
-  if (localStorage.getItem(AUTH_KEY) === 'ok') {
+  if (sessionStorage.getItem(AUTH_KEY) === 'ok') {
     unlock();
   }
 
   function tryLogin() {
     if (passInput.value === CORRECT_PASSWORD) {
-      localStorage.setItem(AUTH_KEY, 'ok');
+      sessionStorage.setItem(AUTH_KEY, 'ok');
       errorEl.textContent = '';
       unlock();
     } else {
