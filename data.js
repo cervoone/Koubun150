@@ -1,3 +1,4 @@
+const QUIZ_DATA = [
  { id: "001", en: "It is certain that climate change is very serious.", jp: "気候変動が非常に深刻であることは確かだ。" },
   { id: "002", en: "It is difficult to change oneʼs behavior.", jp: "人の行動を変えるのは難しい。" },
   { id: "003", en: "It took her three hours to write the letter.", jp: "彼女がその手紙を書くのに３時間かかった。" },
@@ -151,5 +152,5 @@
 ];
 
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = kobunData;
+  module.exports = QUIZ_DATA;
 }
