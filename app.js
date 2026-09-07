@@ -116,18 +116,7 @@ btnStart.addEventListener('click', () => {
   showScreen(screenQuiz);
   renderQuestion();
 });
-    let dir = direction;
-    if (direction === 'mix') dir = Math.random() < 0.5 ? 'ja2en' : 'en2ja';
-    return { ...item, dir };
-  });
-
-  currentIndex = 0;
-  correctCount = 0;
-  wrongItems = [];
-  showScreen(screenQuiz);
-  renderQuestion();
-});
-
+    
 function renderQuestion() {
   const item = quizItems[currentIndex];
   patternNoEl.textContent = item.no;
