@@ -7,6 +7,7 @@ const screenQuiz = document.getElementById('screen-quiz');
 const screenResult = document.getElementById('screen-result');
 
 const numQuestionsInput = document.getElementById('num-questions');
+const startNumberInput = document.getElementById('start-number');
 const totalCountEl = document.getElementById('total-count');
 const settingsError = document.getElementById('settings-error');
 const btnStart = document.getElementById('btn-start');
@@ -21,7 +22,7 @@ const btnReveal = document.getElementById('btn-reveal');
 const judgeRow = document.getElementById('judge-row');
 const btnCorrect = document.getElementById('btn-correct');
 const btnWrong = document.getElementById('btn-wrong');
-
+const btnQuit = document.getElementById('btn-quit');
 const resultCorrectEl = document.getElementById('result-correct');
 const resultTotalEl = document.getElementById('result-total');
 const resultPercentEl = document.getElementById('result-percent');
@@ -52,22 +53,69 @@ function shuffle(arr) {
 }
 
 btnStart.addEventListener('click', () => {
+  const startNumber = parseInt(startNumberInput.value, 10);
   const n = parseInt(numQuestionsInput.value, 10);
   const total = QUIZ_DATA.length;
 
-  if (!n || n < 1 || n > total) {
-    settingsError.textContent = `出題数は 1〜${total} の範囲で入力してください。`;
+  // 入力チェック
+  if (!startNumber || startNumber < 1 || startNumber > total) {
+    settingsError.textContent =
+      `開始番号は 1〜${total} の範囲で入力してください。`;
     return;
   }
+
+  if (!n || n < 1) {
+    settingsError.textContent =
+      '出題数は 1 以上で入力してください。';
+    return;
+  }
+
+  const endNumber = startNumber + n - 1;
+
+  if (endNumber > total) {
+    settingsError.textContent =
+      `No.${startNumber} から ${n} 個だと No.${endNumber} まで必要です。` +
+      `No.${total} 以内になるようにしてください。`;
+    return;
+  }
+
   settingsError.textContent = '';
 
-  const direction = document.querySelector('input[name="direction"]:checked').value;
-  const shuffleOn = document.getElementById('shuffle-order').checked;
+  const direction =
+    document.querySelector('input[name="direction"]:checked').value;
 
-  let pool = shuffleOn ? shuffle(QUIZ_DATA) : QUIZ_DATA.slice();
-  pool = pool.slice(0, n);
+  const shuffleOn =
+    document.getElementById('shuffle-order').checked;
+
+  // 指定された範囲だけを取り出す
+  let pool = QUIZ_DATA.slice(
+    startNumber - 1,
+    startNumber - 1 + n
+  );
+
+  // 「出題順をシャッフルする」がONなら、
+  // 指定された範囲の中だけでシャッフルする
+  if (shuffleOn) {
+    pool = shuffle(pool);
+  }
 
   quizItems = pool.map(item => {
+    let dir = direction;
+
+    if (direction === 'mix') {
+      dir = Math.random() < 0.5 ? 'ja2en' : 'en2ja';
+    }
+
+    return { ...item, dir };
+  });
+
+  currentIndex = 0;
+  correctCount = 0;
+  wrongItems = [];
+
+  showScreen(screenQuiz);
+  renderQuestion();
+});
     let dir = direction;
     if (direction === 'mix') dir = Math.random() < 0.5 ? 'ja2en' : 'en2ja';
     return { ...item, dir };
@@ -151,4 +199,9 @@ function finishQuiz() {
 
 btnRestart.addEventListener('click', () => {
   showScreen(screenSettings);
+});
+
+btnQuit.addEventListener('click', () => {
+  showScreen(screenSettings);
+  settingsError.textContent = '';
 });
