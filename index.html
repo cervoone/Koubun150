@@ -10,7 +10,18 @@
 </head>
 <body>
 
-<div class="app">
+<!-- ============ パスワード認証画面 ============ -->
+<div id="auth-gate" class="auth-gate">
+  <div class="auth-box">
+    <p class="app-title" style="font-size:22px;">校内専用ページ</p>
+    <p class="app-sub">パスワードを入力してください</p>
+    <input type="password" id="auth-password" class="auth-input" placeholder="パスワード">
+    <button id="auth-submit" class="btn-primary">入る</button>
+    <p id="auth-error" class="error-text"></p>
+  </div>
+</div>
+
+<div class="app" id="app-root" style="display:none;">
 
   <!-- ============ 設定画面 ============ -->
   <section id="screen-settings" class="screen">
@@ -93,6 +104,46 @@
   </section>
 
 </div>
+
+<script>
+(function () {
+  const CORRECT_PASSWORD = '150';
+  const AUTH_KEY = 'koubun150-auth';
+
+  const authGate = document.getElementById('auth-gate');
+  const appRoot = document.getElementById('app-root');
+  const passInput = document.getElementById('auth-password');
+  const submitBtn = document.getElementById('auth-submit');
+  const errorEl = document.getElementById('auth-error');
+
+  function unlock() {
+    authGate.style.display = 'none';
+    appRoot.style.display = 'block';
+  }
+
+  // 過去にパスワード認証済みなら（localStorageに記録があれば）自動で表示
+  if (localStorage.getItem(AUTH_KEY) === 'ok') {
+    unlock();
+  }
+
+  function tryLogin() {
+    if (passInput.value === CORRECT_PASSWORD) {
+      localStorage.setItem(AUTH_KEY, 'ok');
+      errorEl.textContent = '';
+      unlock();
+    } else {
+      errorEl.textContent = 'パスワードが違います。';
+      passInput.value = '';
+      passInput.focus();
+    }
+  }
+
+  submitBtn.addEventListener('click', tryLogin);
+  passInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') tryLogin();
+  });
+})();
+</script>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
