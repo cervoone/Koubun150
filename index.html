@@ -17,10 +17,21 @@
     <h1 class="app-title">構文150 クイズ</h1>
     <p class="app-sub">登録済みの構文：<span id="total-count">0</span>個</p>
 
-    <div class="field">
-      <label for="num-questions">出題数</label>
+   <div class="field">
+  <label>出題範囲</label>
+
+  <div class="range-inputs">
+    <div class="range-input">
+      <label for="start-number">何番から</label>
+      <input type="number" id="start-number" min="1" value="1">
+    </div>
+
+    <div class="range-input">
+      <label for="num-questions">何個</label>
       <input type="number" id="num-questions" min="1" value="10">
     </div>
+  </div>
+</div>
 
     <div class="field">
       <label>出題形式</label>
@@ -54,14 +65,17 @@
       <p class="pattern-no">構文 No. <span id="pattern-no">1</span></p>
       <p id="question-text" class="question-text"></p>
       <p id="answer-text" class="answer-text hidden"></p>
-    </div>
+    </div>　
+    
+　　<button id="btn-reveal" class="btn-primary">答えを見る</button>
 
-    <button id="btn-reveal" class="btn-primary">こたえを見る</button>
+<div id="judge-row" class="judge-row hidden">
+  <button id="btn-wrong" class="btn-judge btn-wrong">不正解</button>
+  <button id="btn-correct" class="btn-judge btn-correct">正解</button>
+</div>
 
-    <div id="judge-row" class="judge-row hidden">
-      <button id="btn-wrong" class="btn-judge btn-wrong">不正解</button>
-      <button id="btn-correct" class="btn-judge btn-correct">正解</button>
-    </div>
+<button id="btn-quit" class="btn-secondary">クイズをやめて、ホームに戻る</button>
+    
   </section>
 
   <!-- ============ 結果画面 ============ -->
