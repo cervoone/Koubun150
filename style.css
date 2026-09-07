@@ -235,3 +235,51 @@ body {
   font-size: 14px;
   line-height: 1.5;
 }
+/* --- クイズ終了ボタン --- */
+.btn-secondary {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Noto Sans JP", sans-serif;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--card);
+}
+/* --- 出題範囲入力 --- */
+.range-inputs {
+  display: flex;
+  gap: 12px;
+}
+
+.range-input {
+  flex: 1;
+}
+
+.range-input > label {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.range-input input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--ink);
+}
+
+.range-input input:focus {
+  outline: 2px solid var(--moss);
+  outline-offset: 1px;
+}
