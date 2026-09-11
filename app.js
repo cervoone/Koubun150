@@ -1,7 +1,6 @@
 // ============================================================
 // 構文150 クイズ - アプリ本体
 // ============================================================
-
 const screenSettings = document.getElementById('screen-settings');
 const screenQuiz = document.getElementById('screen-quiz');
 const screenResult = document.getElementById('screen-result');
@@ -23,6 +22,8 @@ const judgeRow = document.getElementById('judge-row');
 const btnCorrect = document.getElementById('btn-correct');
 const btnWrong = document.getElementById('btn-wrong');
 const btnQuit = document.getElementById('btn-quit');
+const btnBackQuestion = document.getElementById('btn-back-question');
+const btnBackAnswer = document.getElementById('btn-back-answer');
 const resultCorrectEl = document.getElementById('result-correct');
 const resultTotalEl = document.getElementById('result-total');
 const resultPercentEl = document.getElementById('result-percent');
@@ -34,6 +35,7 @@ let quizItems = [];   // 出題される構文の配列（{no, ja, en, dir}）
 let currentIndex = 0;
 let correctCount = 0;
 let wrongItems = [];
+let answerHistory = []; // ★追加：各問題の正誤を記録（「戻る」で取り消すために使う）
 
 totalCountEl.textContent = QUIZ_DATA.length;
 numQuestionsInput.max = QUIZ_DATA.length;
@@ -128,6 +130,7 @@ localStorage.setItem(SETTINGS_KEY, JSON.stringify({
   currentIndex = 0;
   correctCount = 0;
   wrongItems = [];
+  answerHistory = [];
 
   showScreen(screenQuiz);
   renderQuestion();
@@ -151,12 +154,25 @@ function renderQuestion() {
   answerTextEl.classList.add('hidden');
   judgeRow.classList.add('hidden');
   btnReveal.classList.remove('hidden');
+  btnBackAnswer.classList.add('hidden');
+
+  // ★追加：最初の問題では「戻る」ボタンを隠す
+  if (currentIndex === 0) {
+    btnBackQuestion.classList.add('hidden');
+  } else {
+    btnBackQuestion.classList.remove('hidden');
+  }
 }
 
 btnReveal.addEventListener('click', () => {
   answerTextEl.classList.remove('hidden');
   judgeRow.classList.remove('hidden');
   btnReveal.classList.add('hidden');
+  btnBackQuestion.classList.add('hidden');
+
+  if (currentIndex > 0) {
+    btnBackAnswer.classList.remove('hidden');
+  }
 });
 
 function goNext(wasCorrect) {
@@ -166,6 +182,8 @@ function goNext(wasCorrect) {
   } else {
     wrongItems.push(item);
   }
+
+  answerHistory.push(wasCorrect); // ★追加：正誤を記録
 
   currentIndex++;
   if (currentIndex < quizItems.length) {
@@ -177,6 +195,37 @@ function goNext(wasCorrect) {
 
 btnCorrect.addEventListener('click', () => goNext(true));
 btnWrong.addEventListener('click', () => goNext(false));
+
+// ★ここから追加：一つ前の問題／解答に戻る
+function goBack(revealAnswer) {
+  if (currentIndex === 0) return; // 最初の問題より前には戻れない
+
+  currentIndex--;
+
+  // 一つ前の問題の正誤記録を取り消す（二重カウント防止）
+  const lastWasCorrect = answerHistory.pop();
+  if (lastWasCorrect === true) {
+    correctCount--;
+  } else if (lastWasCorrect === false) {
+    wrongItems.pop();
+  }
+
+  renderQuestion();
+
+  if (revealAnswer) {
+    answerTextEl.classList.remove('hidden');
+    judgeRow.classList.remove('hidden');
+    btnReveal.classList.add('hidden');
+    btnBackQuestion.classList.add('hidden');
+    if (currentIndex > 0) {
+      btnBackAnswer.classList.remove('hidden');
+    }
+  }
+}
+
+btnBackQuestion.addEventListener('click', () => goBack(false));
+btnBackAnswer.addEventListener('click', () => goBack(true));
+// ★ここまで追加
 
 function finishQuiz() {
   progressBar.style.width = '100%';
@@ -210,3 +259,4 @@ btnQuit.addEventListener('click', () => {
   showScreen(screenSettings);
   settingsError.textContent = '';
 });
+
