@@ -5,7 +5,7 @@ const QUIZ_DATA = [
 { no: 4,  ja: "彼がカナダでスキーをするのに2,500ドルかかった。",    en: "It cost him 2,500 dollars to ski in Canada." },
 { no: 5,  ja: "この証拠から，彼女は無実だということになる。",    en: "From this evidence, it follows that she is innocent." },
 { no: 6,  ja: "ここから横浜駅までは５キロの距離だ。",    en: "It is five kilometers from here to Yokohama Station.", kaisetsu: "〈It is＋距離（＋from A）to B〉は，（A地点から）B地点までの距離を表す表現。このitは明確な意味を持たないが，英語の文では主語が必要になるため，文の形を整えるために置かれている（「非人称のit」という）。itにはこのように，〈距離〉あるいは〈時間〉，〈天気〉，〈寒暖〉，〈明暗〉などを表す用法がある。このitは「それ」とは訳さない。 " },
-{ no: 7,  ja: "あなたに最後にお会いして以来，３か月が経つ。",    en: "It has been three months since I last saw you." },
+{ no: 7,  ja: "あなたに最後にお会いして以来，３か月が経つ。",    en: "It has been three months since I last saw you.", kaisetsu: "〈It has been[is] ... since S′＋過去形〉は，ある時点から今まで，どれくらい時間が経ったかを述べる表現。このitも漠然と時間を表すものであり，「それは」と訳さない。述語動詞はhas beenまたはisとなる。  " },
 { no: 8,  ja: "彼が自分の家を買えるまで数年かかるだろう。",    en: "It will be several years before he can buy his own house." },
 { no: 9,  ja: "ルーカスはエマのことが大好きなようだ。",    en: "Lucas seems to love Emma.", kaisetsu: "seem[appear] toは，have to ～（～しなければならない）, be able to ～ (～することができる）と同じように，〈動詞＋to〉を１つのまとまりとしてとらえる。また、〈S seem[appear] to do.〉は，〈It seems[appears] that S′V′.〉という表現で書き換えられる。 It seems that Lucas loves Emma. " },
 { no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon." },
