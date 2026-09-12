@@ -24,6 +24,11 @@ const btnWrong = document.getElementById('btn-wrong');
 const btnQuit = document.getElementById('btn-quit');
 const btnBackQuestion = document.getElementById('btn-back-question');
 const btnBackAnswer = document.getElementById('btn-back-answer');
+const explainWrap = document.getElementById('explain-wrap');
+const btnExplainToggle = document.getElementById('btn-explain-toggle');
+const explainBox = document.getElementById('explain-box');
+const explainText = document.getElementById('explain-text');
+const btnExplainClose = document.getElementById('btn-explain-close');
 const resultCorrectEl = document.getElementById('result-correct');
 const resultTotalEl = document.getElementById('result-total');
 const resultPercentEl = document.getElementById('result-percent');
@@ -162,7 +167,38 @@ function renderQuestion() {
   } else {
     btnBackQuestion.classList.remove('hidden');
   }
+
+  updateExplainAvailability();
 }
+
+// ★追加：英文が画面に表示されているときだけ「解説」ボタンを出す。
+// 問題が切り替わるたびに解説ボックスは必ず閉じた状態に戻す。
+function updateExplainAvailability() {
+  const item = quizItems[currentIndex];
+  const englishVisible =
+    item.dir === 'en2ja' ||
+    (item.dir === 'ja2en' && !answerTextEl.classList.contains('hidden'));
+
+  if (englishVisible) {
+    explainWrap.classList.remove('hidden');
+    explainText.textContent = item.kaisetsu || '';
+  } else {
+    explainWrap.classList.add('hidden');
+  }
+
+  explainBox.classList.add('hidden');
+  btnExplainToggle.classList.remove('hidden');
+}
+
+btnExplainToggle.addEventListener('click', () => {
+  explainBox.classList.remove('hidden');
+  btnExplainToggle.classList.add('hidden');
+});
+
+btnExplainClose.addEventListener('click', () => {
+  explainBox.classList.add('hidden');
+  btnExplainToggle.classList.remove('hidden');
+});
 
 btnReveal.addEventListener('click', () => {
   answerTextEl.classList.remove('hidden');
@@ -173,6 +209,8 @@ btnReveal.addEventListener('click', () => {
   if (currentIndex > 0) {
     btnBackAnswer.classList.remove('hidden');
   }
+
+  updateExplainAvailability();
 });
 
 function goNext(wasCorrect) {
@@ -220,6 +258,7 @@ function goBack(revealAnswer) {
     if (currentIndex > 0) {
       btnBackAnswer.classList.remove('hidden');
     }
+    updateExplainAvailability();
   }
 }
 
