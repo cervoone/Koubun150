@@ -8,7 +8,7 @@ const QUIZ_DATA = [
 { no: 7,  ja: "あなたに最後にお会いして以来，３か月が経つ。",    en: "It has been three months since I last saw you.", kaisetsu: "〈It has been[is] ... since S′＋過去形〉は，ある過去の時点やある過去の出来事が起こった時点から今まで，どれくらい時間が経ったかを述べる表現。このitも漠然と時間を表すものであり，「それは」と訳さない。述語動詞はhas beenまたはisとなる。  " },
 { no: 8,  ja: "彼が自分の家を買えるまで数年かかるだろう。",    en: "It will be several years before he can buy his own house.", kaisetsu: "〈It＋be動詞 ～ before[until] ...〉は，ある時点までどれくらいの時間がかかるかを述べる表現。今から要する時間を述べる場合は，上の基本例文のように推量の助動詞を伴ってIt will[would] be ～ という形になることが多い。  " },
 { no: 9,  ja: "ルーカスはエマのことが大好きなようだ。",    en: "Lucas seems to love Emma.", kaisetsu: "seem[appear] toは，have to ～（～しなければならない）, be able to ～ (～することができる）と同じように，〈動詞＋to〉を１つのまとまりとしてとらえる。また、〈S seem[appear] to do.〉は，〈It seems[appears] that S′V′.〉という表現で書き換えられる。 It seems that Lucas loves Emma. " },
-{ no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon." },
+{ no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon.", kaisetsu: "learn toも，seem toと同じように〈動詞＋to〉を１つのまとまりとしてとらえるべき表現。learnの中心の意味は「学ぶ」なので，〈learn to do〉は「自ら学んで～する［できる］ようになる」というニュアンス。主に何かの技能が身につくという場合に使う。過去形は〈learned to do〉となる。  " },
 { no: 11,  ja: "彼は大声で話す傾向がある。",    en: "He tends to speak in a loud voice." },
 { no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline." },
 { no: 13,  ja: "昔はよく家の近くの川で泳いだものだ。",    en: "I used to swim in the river near my house." },
