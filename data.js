@@ -7,7 +7,7 @@ const QUIZ_DATA = [
 { no: 6,  ja: "ここから横浜駅までは５キロの距離だ。",    en: "It is five kilometers from here to Yokohama Station." },
 { no: 7,  ja: "あなたに最後にお会いして以来，３か月が経つ。",    en: "It has been three months since I last saw you." },
 { no: 8,  ja: "彼が自分の家を買えるまで数年かかるだろう。",    en: "It will be several years before he can buy his own house." },
-{ no: 9,  ja: "ルーカスはエマのことが大好きなようだ。",    en: "Lucas seems to love Emma.", kaisetsu: "seem[appear] toは，have to ～（～しなければならない）, be able to ～ (～することができる）と同じように，〈動詞＋to〉をcanやmayなどの助動詞のように１つのまとまりとしてとらえる。また、〈S seem[appear] to do.〉は，〈It seems[appears] that S′V′.〉という表現で書き換えられる。 It seems that Lucas loves Emma. " },
+{ no: 9,  ja: "ルーカスはエマのことが大好きなようだ。",    en: "Lucas seems to love Emma.", kaisetsu: "seem[appear] toは，have to ～（～しなければならない）, be able to ～ (～することができる）と同じように，〈動詞＋to〉を１つのまとまりとしてとらえる。また、〈S seem[appear] to do.〉は，〈It seems[appears] that S′V′.〉という表現で書き換えられる。 It seems that Lucas loves Emma. " },
 { no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon." },
 { no: 11,  ja: "彼は大声で話す傾向がある。",    en: "He tends to speak in a loud voice." },
 { no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline." },
