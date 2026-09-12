@@ -54,7 +54,7 @@ const QUIZ_DATA = [
 { no: 53,  ja: "気分が良くなかったので，私は早くベッドに入った。",    en: "Not feeling well, I went to bed early." },
 { no: 54,  ja: "簡単な英語で書かれているので，この本は初心者に向いている。",    en: "Written in easy English, this book is suitable for beginners." },
 { no: 55,  ja: "雨が降りはじめたので，彼らはタクシーに乗ることにした。",    en: "The rain beginning to fall, they decided to take a taxi." },
-{ no: 56,  ja: "厳密に言えば，彼の意見は僕の意見とは少し異なる。",    en: "Strictly speaking, his opinion is a little different from mine." },
+{ no: 56,  ja: "厳密に言えば，彼の意見は僕の意見とは少し異なる。",    en: "Strictly speaking, his opinion is a little different from mine.", kaisetsu: "〈strictly speaking, ...〉は「厳密に言えば，…」の意味で，分詞構文の慣用表現の1つである。分詞構文を用いた慣用表現としては，次のようなものがある。► all things considered「すべてのことを考慮すると」► (all) other things being equal「他の（すべての）条件が同じであれば」► such being the case「そういうわけで」※「such（そのようなこと）が the case（真実）であるので」が直訳。► weather permitting「天気が許せば」► frankly speaking「率直に言うと」► generally speaking「一般的に言うと」► speaking[talking] of ...「…について言うと／…と言えば」► judging from ...「…から判断すると」► considering (that) ...「…を考慮すると［しても］」► assuming (that) ...「…だと仮定して／…だとすると」► seeing (that) ...「…を考えると／…なので[だから]」► taking ... into consideration「…を考慮に入れると［入れて］」" },
 { no: 57,  ja: "そのテーマを調査するのに私たちは２週間を費やした。",    en: "We spent two weeks researching the topic." },
 { no: 58,  ja: "エンジンをかけたまま，車を離れないでください。",    en: "Donʼt leave your car with the engine running." },
 { no: 59,  ja: "彼は（腕が組まれた状態で→）腕を組んで立っていた。",    en: "He was standing with his arms crossed." },
