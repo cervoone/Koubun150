@@ -181,6 +181,7 @@ function updateExplainAvailability() {
 
   if (englishVisible) {
     explainWrap.classList.remove('hidden');
+    explainText.textContent = (item.kaisetsu || '').split('【改行】').join('\n');
     explainText.textContent = item.kaisetsu || '';
   } else {
     explainWrap.classList.add('hidden');
