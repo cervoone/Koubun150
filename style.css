@@ -177,6 +177,64 @@ body {
 }
 .answer-text.hidden { display: none; }
 
+/* --- 解説トグル --- */
+.explain-wrap {
+  margin-top: 14px;
+  text-align: left;
+}
+.explain-wrap.hidden { display: none; }
+
+.btn-explain-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 4px 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.btn-explain-toggle:hover { color: var(--moss-dark); }
+.btn-explain-toggle.hidden { display: none; }
+
+.explain-arrow {
+  font-size: 11px;
+}
+
+.explain-box {
+  margin-top: 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-align: left;
+}
+.explain-box.hidden { display: none; }
+
+.explain-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin: 0 0 10px;
+  white-space: pre-wrap;
+}
+
+.btn-explain-close {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.btn-explain-close:hover { color: var(--moss-dark); }
+
 .judge-row {
   display: flex;
   gap: 12px;
