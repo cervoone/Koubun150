@@ -1,6 +1,7 @@
 const QUIZ_DATA = [
 { no: 1,  ja: "気候変動が非常に深刻であることは確かだ。",    en: "It is certain that climate change is very serious.", kaisetsu: "thatが導く名詞節（〈that S′ V′〉「～ということ」、ここでは「気候変動が非常に深刻であるということ」〈That climate change is very serious〉）が主語として文頭に置かれると，主部の長いバランスの悪い文になることが多い〈That climate change is very serious is certain.〉。これを避けるため，文頭にitを置きthat節を後ろに移動させるのがふつう。このitを「形式主語」といい，本来の主語であるthat節を「真主語」という（形式主語it自体には意味がないので，「それは」と訳さない）。このような型の文を「形式主語構文」という。" },
-{ no: 2,  ja: "人の行動を変えるのは難しい。",    en: "It is difficult to change oneʼs behavior." },
+{ no: 2,  ja: "人の行動を変えるのは難しい。",    en: "It is difficult to change oneʼs behavior." , kaisetsu: "to不定詞句（to不定詞形の動詞から始まるまとまり。ここでは「人の行動を変えること」〈to change one's behavior〉）が主語である文においても，特に句が長い場合に，It is ... to do「～することは…だ」の形式主語構文となる。（to change の to～は「～すること」という名詞的用法。)
+  "},
 { no: 3,  ja: "彼女がその手紙を書くのに３時間かかった。",    en: "It took her three hours to write the letter." },
 { no: 4,  ja: "彼がカナダでスキーをするのに2,500ドルかかった。",    en: "It cost him 2,500 dollars to ski in Canada." },
 { no: 5,  ja: "この証拠から，彼女は無実だということになる。",    en: "From this evidence, it follows that she is innocent." },
