@@ -98,7 +98,7 @@ const QUIZ_DATA = [
 { no: 97,  ja: "その式典では，妻と同じように私も緊張していた。",    en: "I was no less nervous than my wife was at the ceremony.", kaisetsu: "〈no less ～ than ...〉は，No.96の〈no more ～ than ...〉と反対の意味をもつ表現で，「…と同様に～である」の意味。〈A is no less ～ than B (is ...)〉は，than以下に「そうである例」「当然であることの例」を引き合いに出しながら，Aが「そうである」ということを述べる。上記以外にも，以下のような訳がありうる。「Bがそうであるのと同じように，Aもそうである」「Aがそうであるのは，Bがそうであるのと同じだ」► She is no less beautiful than her mother.「彼女はお母さんに負けず劣らず美人だ」 " },
 { no: 98,  ja: "その部屋にはジョン以外に誰もいなかった。",    en: "There was nobody in the room other than John.", kaisetsu: "〈other than ...〉は「…以外」の意味を表す表現。「…」の部分には名詞が置かれることが多いが，動詞を中心とする句や，S′ V′を含む節，文が置かれることもある。► Little is known about the poet, other than that he died in his 20s.20代で死んだということ以外，その詩人についてほとんど知られていない。※other thanの後ろにはthat節が置かれている。"
  },
-{ no: 99,  ja: "私はコーヒーよりもむしろ紅茶が好きだ。",    en: "I prefer tea rather than coffee." },
+{ no: 99,  ja: "私はコーヒーよりもむしろ紅茶が好きだ。",    en: "I prefer tea rather than coffee.", kaisetsu: "〈A rather than B〉はNo.94で扱った〈not so much A as B〉と同じ意味をもち，「BというよりもむしろA」の意味。ただし，２つの表現ではAとBの順序が逆になることに注意。<A rather than B = not so much A as B> 「BというよりむしろA」► He painted those pictures to express himself rather than to make money.＝He painted those pictures not so much to make money as to express himself.「彼はお金を稼ぐためというよりもむしろ，自分自身を表現するためにそれらの絵を描いた」なお，本構文は，〈rather A than B〉と,Aの位置がthanの後になる場合もある。► I think it’s rather green than blue.「それは青というより，むしろ緑だと思う」 " },
 { no: 100,  ja: "今晩は出かけるよりも家にいたい。",    en: "I would rather stay at home than go out tonight." },
 { no: 101,  ja: "高く登れば登るほど，空気はますます薄くなった。",    en: "The higher I climbed, the thinner the air became." },
 { no: 102,  ja: "父親になったので，彼は今，そのぶんいっそう懸命に働く。",    en: "He works all the harder now because he has become a father." },
