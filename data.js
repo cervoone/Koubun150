@@ -9,7 +9,7 @@ const QUIZ_DATA = [
 { no: 8,  ja: "彼が自分の家を買えるまで数年かかるだろう。",    en: "It will be several years before he can buy his own house.", kaisetsu: "〈It＋be動詞 ～ before[until] ...〉は，No.7とは対照的に、未来のある時点までどれくらいの時間がかかるかを述べる表現。No.7はsinceを用いたが,ここではbefore [またはuntil]を用いることに注意。まだ起こっていない未来のことなので、基本例文のように推量の助動詞を伴ってIt will[would] be ～ という形になることが多い。また、beforeの後にS'+ V'が来る場合、その動詞の時制は現在形になることも一つのポイント（時や条件を表す副詞節では未来のことも現在形で代用する、というルール）。No.7とNo.8はセットで覚えるとよい。なお、No.8は過去のある時点までかかったという内容も表すことができ、その場合は It was～ となる。 " },
 { no: 9,  ja: "ルーカスはエマのことが大好きなようだ。",    en: "Lucas seems to love Emma.", kaisetsu: "seem[appear] toは，have to ～（～しなければならない）, be able to ～ (～することができる）と同じように，〈～＋to〉の部分を１つのまとまりとしてとらえる。また、〈S seem[appear] to do.〉は，〈It seems[appears] that S′V′.〉という表現で書き換えられる。 It seems that Lucas loves Emma. " },
 { no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon.", kaisetsu: "learn toも，seem toと同じように〈動詞＋to〉を１つのまとまりとしてとらえるべき表現。learnの中心の意味は「学ぶ」なので，〈learn to do〉は「自ら学んで～する［できる］ようになる」というニュアンス。主に何かの技能が身につくという場合に使う。過去形は〈learned to do〉となる。  " },
-{ no: 11,  ja: "彼は大声で話す傾向がある。",    en: "He tends to speak in a loud voice." },
+{ no: 11,  ja: "彼は大声で話す傾向がある。",    en: "He tends to speak in a loud voice.", kaisetsu: "〈tend to do〉で「～する傾向がある」の意味を表す。「～される傾向がある」と受け身の内容を表す場合は，〈tend to be＋過去分詞〉とする。► English tends to be used widely as an international language.「英語は国際言語として広く使用される傾向がある」「～しない傾向がある」はtendの後ろにnotを置き，〈tend not to do〉とする。► Many houses in Japan tend not to last long.「日本では多くの家が長持ちしない傾向がある。」  " },
 { no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline." },
 { no: 13,  ja: "昔はよく家の近くの川で泳いだものだ。",    en: "I used to swim in the river near my house." },
 { no: 14,  ja: "今まさに電車が出るところだ。",    en: "The train is about to leave." },
