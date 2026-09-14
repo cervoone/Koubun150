@@ -10,7 +10,7 @@ const QUIZ_DATA = [
 { no: 9,  ja: "ルーカスはエマのことが大好きなようだ。",    en: "Lucas seems to love Emma.", kaisetsu: "seem[appear] toは，have to ～（～しなければならない）, be able to ～ (～することができる）と同じように，〈～＋to〉の部分を１つのまとまりとしてとらえる。また、〈S seem[appear] to do.〉は，〈It seems[appears] that S′V′.〉という表現で書き換えられる。 It seems that Lucas loves Emma. " },
 { no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon.", kaisetsu: "learn toも，seem toと同じように〈動詞＋to〉を１つのまとまりとしてとらえるべき表現。learnの中心の意味は「学ぶ」なので，〈learn to do〉は「自ら学んで～する［できる］ようになる」というニュアンス。主に何かの技能が身につくという場合に使う。過去形は〈learned to do〉となる。  " },
 { no: 11,  ja: "彼は大声で話す傾向がある。",    en: "He tends to speak in a loud voice.", kaisetsu: "〈tend to do〉で「～する傾向がある」の意味を表す。「～される傾向がある」と受け身の内容を表す場合は，〈tend to be＋過去分詞〉とする。► English tends to be used widely as an international language.「英語は国際言語として広く使用される傾向がある」「～しない傾向がある」はtendの後ろにnotを置き，〈tend not to do〉とする。► Many houses in Japan tend not to last long.「日本では多くの家が長持ちしない傾向がある。」  " },
-{ no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline." },
+{ no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline.", kaisetsu: "〈manage to do〉は「to以下のことを何とか成し遂げる」という意味。〈manage to do〉のひとまとまりで「どうにかして～する［できる］」ととらえればよい。 " },
 { no: 13,  ja: "昔はよく家の近くの川で泳いだものだ。",    en: "I used to swim in the river near my house." },
 { no: 14,  ja: "今まさに電車が出るところだ。",    en: "The train is about to leave." },
 { no: 15,  ja: "その男は莫大な富を持っていると言われている。",    en: "The man is said to possess great wealth." },
