@@ -13,7 +13,8 @@ const QUIZ_DATA = [
 { no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline.", kaisetsu: "〈manage to do〉は「to以下のことを何とか成し遂げる」という意味。〈manage to do〉のひとまとまりで「どうにかして～する［できる］」ととらえればよい。 " },
 { no: 13,  ja: "昔はよく家の近くの川で泳いだものだ。",    en: "I used to swim in the river near my house.", kaisetsu: " 〈used to do〉 〈would (often) do〉で「昔は～したものだ」という意味。この２つの表現はよく似ているが、実際には次のような違いがあるので、よく使い分けて使う。used to：現在と過去の違い，対比を表現するときにしばしば用いられ，「今はそうではない」という意味を含む。後ろに動作動詞と状態動詞のいずれも置くことができる。would： 現在と過去の対比というよりも，過去にスポットを当てて「昔は（よく）～したものだ」ということを回想的に述べる表現。後ろに動作動詞のみを置く。しばしばoftenなどの頻度・時を表す語句を伴う。※「動作動詞」とは動きのある動詞。たとえば上の基本例文中のswimやgo, runなど。「状態動詞」とは動きのない動詞。たとえば下の類例中のbe［ある］やknowなど。► There used to be a bookstore here.「昔はここに本屋があった」※今はもうない。► I would often play the guitar when I was a college student.「大学時代はよくギターを弾いたものだった」※単に当時はよく弾いたということを述べたのであり，「今は弾かない」という含みはない。（注）〈used to do〉と〈be used to doing［名詞］〉を混同しないよう注意！ 後者は「～（すること）に慣れている」という意味。"
  },
-{ no: 14,  ja: "今まさに電車が出るところだ。",    en: "The train is about to leave." },
+{ no: 14,  ja: "今まさに電車が出るところだ。",    en: "The train is about to leave.", kaisetsu: "〈be about to do〉「まさに［これから］～するところだ」be about toもこの3語をひとまとまりでとらえる。aboutには「…のまわりに」「…の近くに」という意味があるので，この表現は「to doという行為がすぐ近くにある」という意味だと考えられる。ここから「まさに［これから］～するところだ」という訳になる。► The concert was about to end when we arrived at the hall.「私たちがホールに着いたとき，コンサートはまさに終わろうとしていた」aboutの前にjustを加えて〈be just about to do〉とすると「ちょうど」「まさに」の感が強まる。► The shop is just about to close, so we should hurry.「その店は今にも閉まりそうだから，急がないと」"
+},
 { no: 15,  ja: "その男は莫大な富を持っていると言われている。",    en: "The man is said to possess great wealth." },
 { no: 16,  ja: "リサはたぶん，じきに仕事を辞めるだろう。",    en: "Lisa may well leave her job soon." },
 { no: 17,  ja: "その赤ちゃんは一晩中泣き続けた。",    en: "The baby kept crying all night." },
