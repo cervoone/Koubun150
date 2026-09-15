@@ -15,7 +15,8 @@ const QUIZ_DATA = [
  },
 { no: 14,  ja: "今まさに電車が出るところだ。",    en: "The train is about to leave.", kaisetsu: "〈be about to do〉「まさに［これから］～するところだ」be about toもこの3語をひとまとまりでとらえる。aboutには「…のまわりに」「…の近くに」という意味があるので，この表現は「to doという行為がすぐ近くにある」という意味だと考えられる。ここから「まさに［これから］～するところだ」という訳になる。► The concert was about to end when we arrived at the hall.「私たちがホールに着いたとき，コンサートはまさに終わろうとしていた」aboutの前にjustを加えて〈be just about to do〉とすると「ちょうど」「まさに」の感が強まる。► The shop is just about to close, so we should hurry.「その店は今にも閉まりそうだから，急がないと」"
 },
-{ no: 15,  ja: "その男は莫大な富を持っていると言われている。",    en: "The man is said to possess great wealth." },
+{ no: 15,  ja: "その男は莫大な富を持っていると言われている。",    en: "The man is said to possess great wealth.", kaisetsu: "〈be said to do 〉「～すると言われている」be said toは，本来は受動態の表現だが，be able toなどと同じように，事実上は3語でひとまとまりの表現として処理できる。またNo.9のseem toと同様に〈S be said to do.〉は，〈It be said that S′V′.〉という形式主語のItを使った表現で書き換えられる。例文を書き換えると► It is said that the man possesses great wealth.となる。さらに、この構文では，言われている内容がbe saidの時点よりも過去のことである場合，to以下は〈(be said) to have＋過去分詞〉となる。► The man is said to have possessed great wealth. 「その男は莫大な富を持っていたと言われている」► The man was said to possess great wealth. 「その男は莫大な富を持っていると言われていた」► The man was said to have possessed great wealth. 「その男は（それ以前に）莫大な富を持っていたと言われていた」　"
+ },
 { no: 16,  ja: "リサはたぶん，じきに仕事を辞めるだろう。",    en: "Lisa may well leave her job soon." },
 { no: 17,  ja: "その赤ちゃんは一晩中泣き続けた。",    en: "The baby kept crying all night." },
 { no: 18,  ja: "彼は遅いな。電車に乗り遅れたのかもしれない。",    en: "Heʼs late. He may have missed the train." },
