@@ -11,7 +11,8 @@ const QUIZ_DATA = [
 { no: 10,  ja: "息子はじきに読み書きができるようになるだろう。",    en: "My son will learn to read and write soon.", kaisetsu: "learn toも，seem toと同じように〈動詞＋to〉を１つのまとまりとしてとらえるべき表現。learnの中心の意味は「学ぶ」なので，〈learn to do〉は「自ら学んで～する［できる］ようになる」というニュアンス。主に何かの技能が身につくという場合に使う。過去形は〈learned to do〉となる。  " },
 { no: 11,  ja: "彼は大声で話す傾向がある。",    en: "He tends to speak in a loud voice.", kaisetsu: "〈tend to do〉で「～する傾向がある」の意味を表す。「～される傾向がある」と受け身の内容を表す場合は，〈tend to be＋過去分詞〉とする。► English tends to be used widely as an international language.「英語は国際言語として広く使用される傾向がある」「～しない傾向がある」はtendの後ろにnotを置き，〈tend not to do〉とする。► Many houses in Japan tend not to last long.「日本では多くの家が長持ちしない傾向がある。」  " },
 { no: 12,  ja: "私はどうにか締め切りまでにレポートを仕上げることができた。",    en: "I managed to finish my report by the deadline.", kaisetsu: "〈manage to do〉は「to以下のことを何とか成し遂げる」という意味。〈manage to do〉のひとまとまりで「どうにかして～する［できる］」ととらえればよい。 " },
-{ no: 13,  ja: "昔はよく家の近くの川で泳いだものだ。",    en: "I used to swim in the river near my house." },
+{ no: 13,  ja: "昔はよく家の近くの川で泳いだものだ。",    en: "I used to swim in the river near my house.", kaisetsu: "< used to do > < would (often) do >で「昔は～したものだ」という意味。この２つの表現は訳しかた同じだが、実際には次のような違いがあるので、使い分ける必要がある。used to：現在と過去の違い，対比を表現するときにしばしば用いられ，「今はそうではない」という意味を含む。後ろに動作動詞と状態動詞のいずれも置くことができる。would： 現在と過去の対比というよりも，過去にスポットを当てて「昔は（よく）～したものだ」ということを回想的に述べる表現。後ろに動作動詞のみを置く。しばしばoftenなどの頻度・時を表す語句を伴う。※「動作動詞」とは動きのある動詞。たとえば上の基本例文中のswimやgo, runなど。「状態動詞」とは動きのない動詞。たとえば下の類例中のbe［ある］やknowなど。► There used to be a bookstore here.「昔はここに本屋があった」※今はもうない。► I would often play the guitar when I was a college student.「大学時代はよくギターを弾いたものだった」※単に当時はよく弾いたということを述べたのであり，「今は弾かない」という含みはない。（注）〈used to do〉と〈be used to doing［名詞］〉を混同しないよう注意！ 後者は「～（すること）に慣れている」という意味。"
+ },
 { no: 14,  ja: "今まさに電車が出るところだ。",    en: "The train is about to leave." },
 { no: 15,  ja: "その男は莫大な富を持っていると言われている。",    en: "The man is said to possess great wealth." },
 { no: 16,  ja: "リサはたぶん，じきに仕事を辞めるだろう。",    en: "Lisa may well leave her job soon." },
