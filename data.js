@@ -46,7 +46,7 @@ const QUIZ_DATA = [
 { no: 42,  ja: "私は大学に行ったら新しいクラブに入ることに興味をもっている。",    en: "I am interested in joining new clubs when I go to university." },
 { no: 43,  ja: "（強風が，多くの電車が時間通りに運行することを妨げた。→）\n強風のために，多くの電車が時間通りに運行できなかった。",    en: "The windy weather prevented many trains from running on time." },
 { no: 44,  ja: "私は毎晩ゲームをせずにはいられない。",    en: "I cannot help playing games every night." },
-{ no: 45,  ja: "彼が次に何をするか，知ることはできない。",    en: "There is no knowing what he will do next." },
+{ no: 45,  ja: "彼が次に何をするか，知ることはできない。",    en: "There is no knowing what he will do next.", kaisetsu: "〈 There is no ～ing〉は「～することはできない」という意味。There is ～「～がある」の構文では～が主語なので、ここでは ～ingが主語。主語の品詞は常に名詞なので、このdoingは動名詞だと考えられる。no＋名詞は「全くない～」ということだから，直訳は「全くない～すること、がある」となる。ここから「～することは全くない」となるが、実際には「～することはできない」の意味で使う。ただし、この「～できない」は一般的なことを言う場合に使い、特定の個人的が「～できない」には使わない。► There is no telling how long this snow will last. ※このtellは「…がわかる」「この雪がいつまで続くのか，見当がつかない」【１歩進んで】　同じ内容を自分で発信する場合は，It is impossible to～の方が普通。基本例文の内容であれば，次の文がほぼ同内容を表す。045＝ We cannot know what he will do next.＝ It is impossible to know what he will do next.※形式主語構文。真主語はto know what he will do next。  " },
 { no: 46,  ja: "私を脅しても無駄ですよ。",    en: "Itʼs no use threatening me." },
 { no: 47,  ja: "私たちはネコが小さなネズミを追いかけているのを見た。",    en: "We saw a cat chasing a little mouse." },
 { no: 48,  ja: "私は自分の名前が後ろから呼ばれるのを聞いた。",    en: "I heard my name called from behind." },
