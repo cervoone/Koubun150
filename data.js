@@ -17,7 +17,8 @@ const QUIZ_DATA = [
 },
 { no: 15,  ja: "その男は莫大な富を持っていると言われている。",    en: "The man is said to possess great wealth.", kaisetsu: "〈be said to do 〉「～すると言われている」be said toは，本来は受動態の表現だが，be able toなどと同じように，事実上は3語でひとまとまりの表現として処理できる。またNo.9のseem toと同様に〈S be said to do.〉は，〈It be said that S′V′.〉という形式主語のItを使った表現で書き換えられる。例文を書き換えると► It is said that the man possesses great wealth.となる。さらに、この構文では，言われている内容がbe saidの時点よりも過去のことである場合，to以下は〈(be said) to have＋過去分詞〉となる。► The man is said to have possessed great wealth. 「その男は莫大な富を持っていたと言われている」► The man was said to possess great wealth. 「その男は莫大な富を持っていると言われていた」► The man was said to have possessed great wealth. 「その男は（それ以前に）莫大な富を持っていたと言われていた」　"
  },
-{ no: 16,  ja: "リサはたぶん，じきに仕事を辞めるだろう。",    en: "Lisa may well leave her job soon." },
+{ no: 16,  ja: "リサはたぶん，じきに仕事を辞めるだろう。",    en: "Lisa may well leave her job soon.", kaisetsu: "〈may[might] well do〉で「たぶん～だろう／～するのももっともだ」となる。〈may[might] well do〉は，mayの２つの意味，①推量「～かもしれない」，②許可「～してもよい」に対して，well「十分に」が修飾語として加わった表現である。よって意味も大きく2つに分かれる（wellは副詞だが，この表現においてはmay wellのひとまとまりでとらえる）。1つ目の意味は，①推量「～かもしれない」にwell「十分に」が加わって可能性が高まり，「たぶん［おそらく］～だろう」となったもの。► It may well rain tomorrow.「たぶん明日は雨だろう」2つ目の意味は，「～するのももっともだ」である。これは，mayのもう1つの意味，②許可「～してもよい」にwellが加わって，「十分に～してもよい」→「～するのももっともだ［当然だ］」と考えることができる。► He may well be proud of his sons.「彼が息子さんたちを誇りに思うのはもっともなことだ」【注意】〈may[might] as well do〉と混同しないように。 こちらは「～するほうがましだ，～したほうがよい」という意味。 "
+ },
 { no: 17,  ja: "その赤ちゃんは一晩中泣き続けた。",    en: "The baby kept crying all night." },
 { no: 18,  ja: "彼は遅いな。電車に乗り遅れたのかもしれない。",    en: "Heʼs late. He may have missed the train." },
 { no: 19,  ja: "彼らはあまりにも疲れていて動けなかった。",    en: "They were too tired to move." },
