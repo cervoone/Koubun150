@@ -19,7 +19,7 @@ const QUIZ_DATA = [
  },
 { no: 16,  ja: "リサはたぶん，じきに仕事を辞めるだろう。",    en: "Lisa may well leave her job soon.", kaisetsu: "〈may[might] well do〉で「たぶん～だろう／～するのももっともだ」となる。〈may[might] well do〉は，mayの２つの意味，①推量「～かもしれない」，②許可「～してもよい」に対して，well「十分に」が修飾語として加わった表現である。よって意味も大きく2つに分かれる（wellは副詞だが，この表現においてはmay wellのひとまとまりでとらえる）。1つ目の意味は，①推量「～かもしれない」にwell「十分に」が加わって可能性が高まり，「たぶん［おそらく］～だろう」となったもの。► It may well rain tomorrow.「たぶん明日は雨だろう」2つ目の意味は，「～するのももっともだ」である。これは，mayのもう1つの意味，②許可「～してもよい」にwellが加わって，「十分に～してもよい」→「～するのももっともだ［当然だ］」と考えることができる。► He may well be proud of his sons.「彼が息子さんたちを誇りに思うのはもっともなことだ」【注意】〈may[might] as well do〉と混同しないように。 こちらは「～するほうがましだ，～したほうがよい」という意味。 "
  },
-{ no: 17,  ja: "その赤ちゃんは一晩中泣き続けた。",    en: "The baby kept crying all night." },
+{ no: 17,  ja: "その赤ちゃんは一晩中泣き続けた。",    en: "The baby kept crying all night.", kaisetsu: " 〈 keep (on) ---ing 〉⇒　「～し続ける」〈keep (on) doing〉は，keep quiet「静かにしている」などの〈keep C〉と同じく，keepに対するCとしてdoingが置かれたものであるが，これも「～し続ける」の意味のひとまとまりの表現として処理するとよい。► I’ll keep supporting you. （＝I’ll always be supporting you.）「君を支え続けるよ」keepとdoingの間にonが置かれた場合は，「継続・反復」が強調される。► The clock kept on stopping even after the battery was changed.「その時計は電池を替えたあとも繰り返し止まった」 " },
 { no: 18,  ja: "彼は遅いな。電車に乗り遅れたのかもしれない。",    en: "Heʼs late. He may have missed the train." },
 { no: 19,  ja: "彼らはあまりにも疲れていて動けなかった。",    en: "They were too tired to move." },
 { no: 20,  ja: "彼女のスカートは床に触れるほど長かった。",    en: "Her skirt was long enough to touch the floor." },
