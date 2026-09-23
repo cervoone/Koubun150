@@ -95,7 +95,7 @@ const QUIZ_DATA = [
 { no: 88,  ja: "ここが彼が住んでいる場所だ。",    en: "This is where he lives." },
 { no: 89,  ja: "彼が彼女に言ったことは本当だった。",    en: "What he said to her was true." },
 { no: 90,  ja: "彼は良い科学者であり，さらに良いことには，私たちの教師だ。",    en: "He is a good scientist, and what is better, he is our teacher." },
-{ no: 91,  ja: "トムはパーティーに来られなかった。それは残念なことだった。",    en: "Tom couldnʼt come to the party, which was a pity." },
+{ no: 91,  ja: "トムはパーティーに来られなかった。それは残念なことだった。",    en: "Tom couldnʼt come to the party, which was a pity." , kaisetsu: "〈前節（の中の一部）を受ける which 〉⇒ 「それは～」関係代名詞のwhichが非制限用法（直前にカンマをおく）で用いられる場合，whichが直前の名詞ばかりではなく，前の節全体あるいはその一部を指すことがある。このwhichは「それは／これは」「そのことは／このことは」などと訳出し，which以下を訳し下す。091基本例文ではwhichは前の節全体を指すが，以下の例ではwhichは前の節の一部（that she didn’t steal the moneyの部分）を指す。► She said that she didn’t steal the money, which was perfectly true.「彼女はその金を盗んではいないと言ったが，それはまったく本当のことだった」また次の例では，whichは前の節の中のto solve the problemの部分を指す。► I tried to solve the problem, which I found impossible.「私はその問題を解こうとしたが，これは不可能だとわかった」No.091基本例文のwhichは主格だが，上の例のwhichは目的格であり，foundの後ろにwhich節が指す内容を入れて文意を理解する。 " },
 { no: 92,  ja: "私には彼の外見からわかっていたが，彼は画家だった。",    en: "He was a painter, as I knew from his appearance." },
 { no: 93,  ja: "彼はできるだけゆっくり歩いた。",    en: "He walked as slowly as possible." },
 { no: 94,  ja: "この映画は興味深いというよりもむしろ，わくわくするものだ。",    en: "This movie is not so much interesting as exciting." },
